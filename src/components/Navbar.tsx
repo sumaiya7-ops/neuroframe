@@ -5,15 +5,15 @@ export default function Navbar() {
   const { user, logout } = useAuth();
 
   return (
-    <nav className="flex items-center justify-between px-6 py-4 bg-[#f3e7e9] border-b border-[#7a2e3a]/10 shadow-sm">
+    <nav className="flex items-center justify-between px-6 py-4 bg-indigo-50 border-b border-[#7a2e3a]/10 shadow-sm">
       
       {/* Logo */}
-      <div className="text-2xl font-bold text-[#7a2e3a]">
+      <div className="text-2xl font-bold text-[#ad0821]">
         NeuroFrame
       </div>
 
       {/* Menu */}
-      <div className="flex gap-6 text-[#7a2e3a] font-medium">
+      <div className="flex gap-6 text-cyan-600 font-medium">
         <Link className="hover:text-[#4f46e5] transition" to="/">
           Home
         </Link>

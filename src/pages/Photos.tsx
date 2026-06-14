@@ -26,14 +26,14 @@ export default function Photos() {
       : images.filter((img) => img.category === category);
 
   return (
-    <div className="min-h-screen bg-[#f3e7e9] text-[#7a2e3a]">
+    <div className="min-h-screen bg-[#cbe4fc] text-[#fc06d3]">
       
       <Navbar />
 
       <div className="p-6">
 
         {/* title */}
-        <h1 className="text-3xl font-bold text-[#7a2e3a] mb-6">
+        <h1 className="text-3xl font-bold text-[#fb089e] mb-6">
           All Photos Gallery
         </h1>
 

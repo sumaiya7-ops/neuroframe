@@ -18,7 +18,7 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f3e7e9] text-[#7a2e3a] p-10">
+    <div className="min-h-screen bg-indigo-50 text-[#7a2e3a] p-10">
 
       {/* title */}
       <h1 className="text-4xl font-bold text-center mb-10">

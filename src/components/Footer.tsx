@@ -1,15 +1,15 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#f3e7e9] border-t border-[#7a2e3a]/10 mt-16">
+    <footer className="bg-[#e2c7f0] border-t border-[#7a2e3a]/10 mt-16">
 
       <div className="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-8">
 
         {/* Brand */}
         <div>
-          <h2 className="text-2xl font-bold text-[#7a2e3a]">
+          <h2 className="text-2xl font-bold text-[#ef10f7]">
             NeuroFrame
           </h2>
-          <p className="text-sm text-[#7a2e3a]/70 mt-2">
+          <p className="text-sm text-[#0f0e0e] mt-2">
             AI-powered image generation platform built for creators,
             designers, and dreamers.
           </p>
@@ -17,11 +17,11 @@ export default function Footer() {
 
         {/* Links */}
         <div>
-          <h3 className="text-lg font-semibold text-[#7a2e3a] mb-3">
+          <h3 className="text-lg font-semibold text-[#19a6da] mb-3">
             Quick Links
           </h3>
 
-          <ul className="space-y-2 text-[#7a2e3a]/70">
+          <ul className="space-y-2 text-[#ed0a92]">
             <li className="hover:text-[#4f46e5] transition">Home</li>
             <li className="hover:text-[#4f46e5] transition">All Photos</li>
             <li className="hover:text-[#4f46e5] transition">Pricing</li>
@@ -31,11 +31,11 @@ export default function Footer() {
 
         {/* Contact / CTA */}
         <div>
-          <h3 className="text-lg font-semibold text-[#7a2e3a] mb-3">
+          <h3 className="text-lg font-semibold text-[#f405dc] mb-3">
             Stay Connected
           </h3>
 
-          <p className="text-sm text-[#7a2e3a]/70 mb-4">
+          <p className="text-sm text-[#0b070a] mb-4">
             Subscribe for updates and new AI features.
           </p>
 
@@ -55,7 +55,7 @@ export default function Footer() {
       </div>
 
       {/* bottom bar */}
-      <div className="border-t border-[#7a2e3a]/10 py-4 text-center text-sm text-[#7a2e3a]/60">
+      <div className="border-t border-[#7a2e3a]/10 py-4 text-center text-sm text-[#f703a1]">
         © {new Date().getFullYear()} NeuroFrame. All rights reserved.
       </div>
 

@@ -28,11 +28,11 @@ export default function ImageCard({ image }: any) {
       {/* content */}
       <div className="p-4">
 
-        <h3 className="font-bold text-[#7a2e3a] text-lg">
+        <h3 className="font-bold text-[#f00ca0] text-lg">
           {image.title}
         </h3>
 
-        <p className="text-sm text-[#7a2e3a]/60">
+        <p className="text-sm text-[#3009bd]">
           {image.category}
         </p>
 
@@ -51,7 +51,7 @@ export default function ImageCard({ image }: any) {
           <a
             href={image.url}
             download
-            className="text-[#4f46e5] font-medium hover:underline"
+            className="text-[#d40606] font-medium hover:underline"
           >
             ⬇ Download
           </a>
@@ -59,7 +59,7 @@ export default function ImageCard({ image }: any) {
           {/* view */}
           <button
             onClick={handleView}
-            className="px-3 py-1 rounded-md bg-[#7a2e3a] text-white hover:bg-[#4f46e5] transition"
+            className="px-3 py-1 rounded-md bg-[#f70e31] text-white hover:bg-[#4f46e5] transition"
           >
             👁 View
           </button>
