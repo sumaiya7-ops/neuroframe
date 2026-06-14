@@ -17,30 +17,53 @@ export default function ImageCard({ image }: any) {
   };
 
   return (
-    <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden hover:scale-105 transition duration-300">
+    <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-[#7a2e3a]/10 hover:shadow-xl transition duration-300 hover:-translate-y-1">
       
+      {/* image */}
       <img
         src={image.url}
         className="h-48 w-full object-cover"
       />
 
+      {/* content */}
       <div className="p-4">
-        <h3 className="font-bold text-indigo-200">
+
+        <h3 className="font-bold text-[#7a2e3a] text-lg">
           {image.title}
         </h3>
 
-        <div className="flex justify-between mt-3 text-sm">
-          <button onClick={() => setLiked(!liked)}>
+        <p className="text-sm text-[#7a2e3a]/60">
+          {image.category}
+        </p>
+
+        {/* actions */}
+        <div className="flex justify-between items-center mt-4 text-sm">
+
+          {/* like */}
+          <button
+            onClick={() => setLiked(!liked)}
+            className="text-xl"
+          >
             {liked ? "❤️" : "🤍"}
           </button>
 
-          <a href={image.url} download className="text-indigo-300">
+          {/* download */}
+          <a
+            href={image.url}
+            download
+            className="text-[#4f46e5] font-medium hover:underline"
+          >
             ⬇ Download
           </a>
 
-          <button onClick={handleView} className="text-green-400">
+          {/* view */}
+          <button
+            onClick={handleView}
+            className="px-3 py-1 rounded-md bg-[#7a2e3a] text-white hover:bg-[#4f46e5] transition"
+          >
             👁 View
           </button>
+
         </div>
       </div>
     </div>

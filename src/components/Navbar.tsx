@@ -5,32 +5,43 @@ export default function Navbar() {
   const { user, logout } = useAuth();
 
   return (
-    <nav className="flex items-center justify-between px-6 py-4 bg-[#0b0b1a] text-white border-b border-indigo-900">
+    <nav className="flex items-center justify-between px-6 py-4 bg-[#f3e7e9] border-b border-[#7a2e3a]/10 shadow-sm">
       
       {/* Logo */}
-      <div className="text-2xl font-bold text-indigo-300">
+      <div className="text-2xl font-bold text-[#7a2e3a]">
         NeuroFrame
       </div>
 
       {/* Menu */}
-      <div className="flex gap-6">
-        <Link to="/">Home</Link>
-        <Link to="/photos">All Photos</Link>
-        <Link to="/pricing">Pricing</Link>
-        <Link to="/profile">Profile</Link>
+      <div className="flex gap-6 text-[#7a2e3a] font-medium">
+        <Link className="hover:text-[#4f46e5] transition" to="/">
+          Home
+        </Link>
+
+        <Link className="hover:text-[#4f46e5] transition" to="/photos">
+          All Photos
+        </Link>
+
+        <Link className="hover:text-[#4f46e5] transition" to="/pricing">
+          Pricing
+        </Link>
+
+        <Link className="hover:text-[#4f46e5] transition" to="/profile">
+          Profile
+        </Link>
       </div>
 
       {/* Auth */}
       <div className="flex items-center gap-3">
         {user ? (
           <>
-            <span className="text-indigo-300 text-sm">
+            <span className="text-sm text-[#7a2e3a]">
               {user.email}
             </span>
 
             <button
               onClick={logout}
-              className="px-3 py-1 border border-red-500 text-red-300 rounded"
+              className="px-3 py-1 rounded-md border border-[#7a2e3a] text-[#7a2e3a] hover:bg-[#7a2e3a] hover:text-white transition"
             >
               Logout
             </button>
@@ -39,14 +50,14 @@ export default function Navbar() {
           <>
             <Link
               to="/signin"
-              className="px-3 py-1 border border-indigo-400 rounded"
+              className="px-3 py-1 rounded-md border border-[#4f46e5] text-[#4f46e5] hover:bg-[#4f46e5] hover:text-white transition"
             >
               Sign In
             </Link>
 
             <Link
               to="/signup"
-              className="px-3 py-1 bg-indigo-600 rounded"
+              className="px-3 py-1 rounded-md bg-[#4f46e5] text-white hover:opacity-90 transition"
             >
               Sign Up
             </Link>

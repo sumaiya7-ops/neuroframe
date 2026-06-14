@@ -4,21 +4,36 @@ export default function Profile() {
   const { user } = useAuth();
 
   return (
-    <div className="h-screen flex items-center justify-center">
-      <div className="bg-white/5 border border-white/10 p-6 rounded-xl text-center">
-        
-        <h2 className="text-2xl text-indigo-300">
+    <div className="min-h-screen flex items-center justify-center bg-[#f3e7e9] text-[#7a2e3a]">
+
+      <div className="bg-white rounded-2xl shadow-md border border-[#7a2e3a]/10 p-8 text-center w-96 hover:shadow-xl transition">
+
+        {/* title */}
+        <h2 className="text-3xl font-bold mb-4 text-[#7a2e3a]">
           User Profile
         </h2>
 
+        {/* user info */}
         {user ? (
-          <p className="mt-2 text-gray-300">
-            Logged in as: {user.email}
-          </p>
+          <div className="space-y-3">
+
+            <p className="text-[#7a2e3a]/70">
+              Logged in as:
+            </p>
+
+            <p className="text-lg font-semibold text-[#4f46e5]">
+              {user.email}
+            </p>
+
+            <div className="mt-4 text-sm text-green-600">
+              ● Active Account
+            </div>
+
+          </div>
         ) : (
-          <p className="mt-2 text-red-400">
+          <div className="text-red-400 font-medium">
             Not logged in
-          </p>
+          </div>
         )}
 
       </div>

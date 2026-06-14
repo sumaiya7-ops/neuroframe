@@ -26,27 +26,31 @@ export default function Photos() {
       : images.filter((img) => img.category === category);
 
   return (
-    <div className="min-h-screen bg-[#0b0b1a] text-white">
+    <div className="min-h-screen bg-[#f3e7e9] text-[#7a2e3a]">
+      
       <Navbar />
 
       <div className="p-6">
-        <h1 className="text-3xl font-bold text-indigo-300 mb-4">
+
+        {/* title */}
+        <h1 className="text-3xl font-bold text-[#7a2e3a] mb-6">
           All Photos Gallery
         </h1>
 
-        {/* Category Filter */}
+        {/* category filter */}
         <CategoryFilter
           categories={categories}
           selected={category}
           onSelect={setCategory}
         />
 
-        {/* Images Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+        {/* grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
           {filtered.map((img) => (
             <ImageCard key={img.id} image={img} />
           ))}
         </div>
+
       </div>
     </div>
   );

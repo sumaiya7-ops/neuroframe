@@ -3,8 +3,8 @@
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
-  background: radial-gradient(circle at top, #1a1a3a, #0b0b1a);
-  color: white;
+  background: #f3e7e9;
+  color: #7a2e3a;
 }
 
 /* smooth scrolling */
@@ -18,18 +18,17 @@ a {
   color: inherit;
 }
 
-/* buttons smooth effect */
+/* buttons */
 button {
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 
-/* hover lift effect */
 button:hover {
   transform: translateY(-2px);
 }
 
-/* images smooth */
+/* images */
 img {
   transition: all 0.3s ease-in-out;
 }
@@ -38,10 +37,10 @@ img:hover {
   transform: scale(1.02);
 }
 
-/* glass effect helper (optional reuse) */
+/* optional utility (light glass) */
 .glass {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(122, 46, 58, 0.1);
   border-radius: 12px;
 }

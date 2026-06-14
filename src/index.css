@@ -1,7 +1,18 @@
 @import "tailwindcss";
 
 body {
-  background: radial-gradient(circle at top, #1a1a3a, #0b0b1a);
-  color: white;
+  margin: 0;
+  background: #f3e7e9;
+  color: #7a2e3a;
   font-family: sans-serif;
+}
+
+/* smooth UI */
+button {
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-2px);
 }

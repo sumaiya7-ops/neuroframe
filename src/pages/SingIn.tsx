@@ -21,29 +21,46 @@ export default function SignIn() {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center bg-[#0b0b1a] text-white">
-      <form className="bg-gray-900 p-6 rounded-lg w-96">
-        <h2 className="text-2xl mb-4">Sign In</h2>
+    <div className="min-h-screen flex items-center justify-center bg-[#f3e7e9]">
 
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white p-8 rounded-2xl shadow-md border border-[#7a2e3a]/10 w-96"
+      >
+
+        {/* title */}
+        <h2 className="text-3xl font-bold text-center text-[#7a2e3a] mb-6">
+          Welcome Back
+        </h2>
+
+        {/* email */}
         <input
           placeholder="Email"
-          className="w-full p-2 mb-3 text-black"
+          className="w-full p-3 mb-4 rounded-lg border border-[#7a2e3a]/20 focus:outline-none focus:border-[#4f46e5]"
           onChange={(e) => setEmail(e.target.value)}
         />
 
+        {/* password */}
         <input
           type="password"
           placeholder="Password (8+ chars)"
-          className="w-full p-2 mb-3 text-black"
+          className="w-full p-3 mb-4 rounded-lg border border-[#7a2e3a]/20 focus:outline-none focus:border-[#4f46e5]"
           onChange={(e) => setPassword(e.target.value)}
         />
 
+        {/* button */}
         <button
-          onClick={handleSubmit}
-          className="w-full bg-indigo-600 p-2 rounded"
+          type="submit"
+          className="w-full py-3 rounded-lg bg-[#4f46e5] text-white font-medium hover:opacity-90 transition"
         >
           Sign In
         </button>
+
+        {/* footer text */}
+        <p className="text-center text-sm text-[#7a2e3a]/60 mt-4">
+          Secure AI Image Platform
+        </p>
+
       </form>
     </div>
   );

@@ -18,26 +18,47 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0b0b1a] text-white p-10">
-      <h1 className="text-3xl mb-8 text-center">Pricing Plans</h1>
+    <div className="min-h-screen bg-[#f3e7e9] text-[#7a2e3a] p-10">
 
-      <div className="grid md:grid-cols-3 gap-6">
+      {/* title */}
+      <h1 className="text-4xl font-bold text-center mb-10">
+        Pricing Plans
+      </h1>
+
+      {/* cards */}
+      <div className="grid md:grid-cols-3 gap-8">
+
         {plans.map((p, i) => (
-          <div key={i} className="bg-gray-900 p-6 rounded-lg">
-            <h2 className="text-xl mb-2">{p.name}</h2>
-            <h3 className="text-2xl text-indigo-400 mb-4">{p.price}</h3>
+          <div
+            key={i}
+            className="bg-white rounded-2xl p-6 border border-[#7a2e3a]/10 shadow-md hover:shadow-xl hover:-translate-y-1 transition"
+          >
 
-            <ul className="mb-4">
+            {/* plan name */}
+            <h2 className="text-xl font-bold text-[#7a2e3a] mb-2">
+              {p.name}
+            </h2>
+
+            {/* price */}
+            <h3 className="text-3xl font-bold text-[#4f46e5] mb-4">
+              {p.price}
+            </h3>
+
+            {/* features */}
+            <ul className="mb-6 space-y-2 text-[#7a2e3a]/70">
               {p.features.map((f, idx) => (
                 <li key={idx}>• {f}</li>
               ))}
             </ul>
 
-            <button className="w-full bg-indigo-600 p-2 rounded">
+            {/* button */}
+            <button className="w-full py-2 rounded-lg bg-[#4f46e5] text-white hover:opacity-90 transition">
               Buy Now
             </button>
+
           </div>
         ))}
+
       </div>
     </div>
   );
