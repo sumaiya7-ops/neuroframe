@@ -13,7 +13,7 @@ export default function Navbar() {
       </div>
 
       {/* Menu */}
-      <div className="flex gap-6 text-cyan-600 font-medium">
+      <div className="flex gap-6 text-black font-medium">
         <Link className="hover:text-[#4f46e5] transition" to="/">
           Home
         </Link>
@@ -35,7 +35,7 @@ export default function Navbar() {
       <div className="flex items-center gap-3">
         {user ? (
           <>
-            <span className="text-sm text-[#7a2e3a]">
+            <span className="text-sm text-[#060606]">
               {user.email}
             </span>
 
@@ -57,7 +57,7 @@ export default function Navbar() {
 
             <Link
               to="/signup"
-              className="px-3 py-1 rounded-md bg-[#4f46e5] text-white hover:opacity-90 transition"
+              className="px-3 py-1 rounded-md bg-red-500 text-white hover:opacity-90 transition"
             >
               Sign Up
             </Link>

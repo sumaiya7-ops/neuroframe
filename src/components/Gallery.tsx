@@ -19,7 +19,7 @@ export default function Gallery() {
       : images.filter((img) => img.category === category);
 
   return (
-    <section className="p-6 text-white">
+    <section className="p-6 text-black">
       <h2 className="text-2xl font-bold mb-4">
         Top Generations
       </h2>

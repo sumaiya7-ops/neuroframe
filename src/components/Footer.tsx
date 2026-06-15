@@ -1,12 +1,12 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#e2c7f0] border-t border-[#7a2e3a]/10 mt-16">
+    <footer className="bg-indigo-100 border-t border-[#7a2e3a]/10 mt-16">
 
       <div className="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-8">
 
         {/* Brand */}
         <div>
-          <h2 className="text-2xl font-bold text-[#ef10f7]">
+          <h2 className="text-2xl font-bold text-[#ad0821]">
             NeuroFrame
           </h2>
           <p className="text-sm text-[#0f0e0e] mt-2">
@@ -21,7 +21,7 @@ export default function Footer() {
             Quick Links
           </h3>
 
-          <ul className="space-y-2 text-[#ed0a92]">
+          <ul className="space-y-2 text-black">
             <li className="hover:text-[#4f46e5] transition">Home</li>
             <li className="hover:text-[#4f46e5] transition">All Photos</li>
             <li className="hover:text-[#4f46e5] transition">Pricing</li>
@@ -31,7 +31,7 @@ export default function Footer() {
 
         {/* Contact / CTA */}
         <div>
-          <h3 className="text-lg font-semibold text-[#f405dc] mb-3">
+          <h3 className="text-lg font-semibold text-black mb-3">
             Stay Connected
           </h3>
 
@@ -43,7 +43,7 @@ export default function Footer() {
             <input
               type="email"
               placeholder="Enter email"
-              className="w-full px-3 py-2 rounded-l-lg border border-[#7a2e3a]/20 focus:outline-none"
+              className="w-full px-3 py-2 rounded-l-lg border border-[#7a2e3a]/20 focus:outline-none text-black"
             />
 
             <button className="px-4 py-2 bg-[#4f46e5] text-white rounded-r-lg hover:opacity-90 transition">

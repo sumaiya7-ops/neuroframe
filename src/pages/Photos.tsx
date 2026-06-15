@@ -26,7 +26,7 @@ export default function Photos() {
       : images.filter((img) => img.category === category);
 
   return (
-    <div className="min-h-screen bg-[#cbe4fc] text-[#fc06d3]">
+    <div className="min-h-screen bg-indigo-50 text-[#fc06d3]">
       
       <Navbar />
 

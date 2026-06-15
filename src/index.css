@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  background: #e2c7f0;
+   background-color: theme(colors.indigo.50);
   color:  #e2c7f0 ;
   font-family: sans-serif;
 }
