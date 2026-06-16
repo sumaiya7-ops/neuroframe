@@ -4,8 +4,20 @@ import { useNavigate } from "react-router-dom";
 
 export default function ImageCard({ image }: any) {
   const [liked, setLiked] = useState(false);
+  const [likeCount, setLikeCount] = useState(0);
+
   const { user } = useAuth();
   const navigate = useNavigate();
+
+  const handleLike = () => {
+    if (liked) {
+      setLikeCount(0);
+    } else {
+      setLikeCount(1);
+    }
+
+    setLiked(!liked);
+  };
 
   const handleView = () => {
     if (!user) {
@@ -19,35 +31,44 @@ export default function ImageCard({ image }: any) {
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-[#7a2e3a]/10 hover:shadow-xl transition duration-300 hover:-translate-y-1">
       
-      {/* image */}
+      {/* Image */}
       <img
         src={image.url}
+        alt={image.title}
         className="h-48 w-full object-cover"
       />
 
-      {/* content */}
+      {/* Content */}
       <div className="p-4">
-
+        
+        {/* Title */}
         <h3 className="font-bold text-[#f00ca0] text-lg">
           {image.title}
         </h3>
 
-        <p className="text-sm text-[#3009bd]">
+        {/* Category */}
+        <p className="text-sm text-[#3009bd] mt-1">
           {image.category}
         </p>
 
-        {/* actions */}
+        {/* Actions */}
         <div className="flex justify-between items-center mt-4 text-sm">
 
-          {/* like */}
+          {/* Like */}
           <button
-            onClick={() => setLiked(!liked)}
-            className="text-xl"
+            onClick={handleLike}
+            className="flex items-center gap-1"
           >
-            {liked ? "❤️" : "🤍"}
+            <span className="text-xl">
+              {liked ? "❤️" : "🤍"}
+            </span>
+
+            <span className="font-medium text-[#f00ca0]">
+              {likeCount}
+            </span>
           </button>
 
-          {/* download */}
+          {/* Download */}
           <a
             href={image.url}
             download
@@ -56,7 +77,7 @@ export default function ImageCard({ image }: any) {
             ⬇ Download
           </a>
 
-          {/* view */}
+          {/* View */}
           <button
             onClick={handleView}
             className="px-3 py-1 rounded-md bg-[#f70e31] text-white hover:bg-[#4f46e5] transition"

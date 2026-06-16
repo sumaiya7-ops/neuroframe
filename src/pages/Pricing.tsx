@@ -18,7 +18,7 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="min-h-screen bg-indigo-50 text-[#7a2e3a] p-10">
+    <div className="min-h-screen bg-indigo-50 text-black p-10">
 
       {/* title */}
       <h1 className="text-4xl font-bold text-center mb-10">
@@ -35,17 +35,17 @@ export default function Pricing() {
           >
 
             {/* plan name */}
-            <h2 className="text-xl font-bold text-[#7a2e3a] mb-2">
+            <h2 className="text-xl font-bold text-black mb-2">
               {p.name}
             </h2>
 
             {/* price */}
-            <h3 className="text-3xl font-bold text-[#4f46e5] mb-4">
+            <h3 className="text-3xl font-bold text-red-500 mb-4">
               {p.price}
             </h3>
 
             {/* features */}
-            <ul className="mb-6 space-y-2 text-[#7a2e3a]/70">
+            <ul className="mb-6 space-y-2 text-black">
               {p.features.map((f, idx) => (
                 <li key={idx}>• {f}</li>
               ))}

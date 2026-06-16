@@ -17,7 +17,7 @@ export default function CategoryFilter({
           onClick={() => onSelect(cat)}
           className={`px-4 py-2 rounded-xl border ${
             selected === cat
-              ? "bg-indigo-600 text-white"
+              ? "bg-indigo-400 text-white"
               : "border-indigo-400 text-black"
           }`}
         >
